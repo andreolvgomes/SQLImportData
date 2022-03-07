@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="SQLImportData.Steps.FromDataSource"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             >
+    <StackPanel>
+        <TextBlock Text="Fonte de Dados CSV" Style="{StaticResource Header}"/>
+        <TextBlock Text="A primeira linha deve ser o cabeçalho dos dados" FontSize="10" Style="{StaticResource Header}" Foreground="Red"/>
+        
+        <TextBlock Text="CSV"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox Grid.Column="0" Text="{Binding File, UpdateSourceTrigger=PropertyChanged}"/>
+            <Button Grid.Column="1" Content="..." Width="50" Click="Search_Click"/>
+        </Grid>
+    </StackPanel>
+</UserControl>
