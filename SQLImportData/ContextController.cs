@@ -93,8 +93,8 @@ namespace SQLImportData
 
             foreach (DataColumn col in DataTable.Columns)
             {
-                listColumnsParam.Add($"@{col.ColumnName}");
-                listColumns.Add(col.ColumnName);
+                listColumnsParam.Add($"@{col.ColumnName.Replace(" ", "_")}");
+                listColumns.Add($"[{col.ColumnName}]");
             }
 
             var sql = $"insert into dbo.[{Table}]";
@@ -107,7 +107,7 @@ namespace SQLImportData
                 {
                     command.CommandText = sql;
                     foreach (DataColumn item in DataTable.Columns)
-                        command.Parameters.AddWithValue($"@{item.ColumnName}", row[item.ColumnName]);
+                        command.Parameters.AddWithValue($"@{item.ColumnName.Replace(" ", "_")}", row[item.ColumnName]);
 
                     command.ExecuteNonQuery();
                 }

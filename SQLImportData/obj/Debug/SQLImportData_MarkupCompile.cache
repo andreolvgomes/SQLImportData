@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\André\source\repos\SQLImportData\SQLImportData\obj\Debug\
+C:\SQLImportData\SQLImportData\obj\Debug\
 SQLImportData
 none
 false
 DEBUG;TRACE
-C:\Users\André\source\repos\SQLImportData\SQLImportData\App.xaml
+C:\SQLImportData\SQLImportData\App.xaml
 6999681930
 
 181797791763
-18-2017791968
+181399560443
 MainWindow.xaml;Steps\Finish.xaml;Steps\FromDataSource.xaml;Steps\ShowDatas.xaml;Steps\ToDataSource.xaml;ToDoTask.xaml;
 
 False
